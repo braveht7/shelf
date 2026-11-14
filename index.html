@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카카오 다크모드 - TV하단 무타공 셋톱박스 선반장 3종 집중 비교</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* 카카오톡 다크모드 시그니처 테마 */
+      --kakao-yellow: #FEE500;
+      --kakao-yellow-hover: #e5cf00;
+      --kakao-brown: #3C1E1E;
+      --bg-main: #191a1c;          /* 깊고 편안한 웜 다크 배경 */
+      --bg-card: #222428;          /* 카드 및 모듈 배경 */
+      --bg-card-sub: #2b2e33;      /* 내부 서브 박스 배경 */
+      --border-color: #32353b;     /* 은은한 경계선 */
+      --text-title: #f5f6f8;       /* 메인 화이트 텍스트 */
+      --text-body: #caced4;        /* 편안한 밝은 회색 */
+      --text-muted: #8a919e;       /* 보조 텍스트 */
+      --star-color: #ffb703;
+      --radius-xl: 20px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-body);
+      line-height: 1.5;
+      font-size: 14px;
+      padding-bottom: 70px;
+    }
+
+    /* Kakao-style Header / GNB */
+    .kakao-gnb {
+      background: #1e2023;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .gnb-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .kakao-pill {
+      background: var(--kakao-yellow);
+      color: var(--kakao-brown);
+      font-weight: 900;
+      font-size: 15px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: -0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-title);
+      letter-spacing: -0.02em;
+    }
+
+    .gnb-badge {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: #282a2f;
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: 14px;
+      font-weight: 500;
+    }
+
+    .gnb-badge strong {
+      color: var(--kakao-yellow);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1120px;
+      margin: 20px auto 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--kakao-yellow);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--kakao-brown);
+      background: var(--kakao-yellow);
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-title);
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .hero-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      letter-spacing: -0.01em;
+    }
+
+    /* Kakao Card Guide (3줄 핵심 요약) */
+    .kakao-guide {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-dark);
+    }
+
+    .guide-header {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text-title);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .guide-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .guide-item {
+      background: var(--bg-card-sub);
+      border: 1px solid #363a42;
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+    }
+
+    .guide-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--kakao-brown);
+      background: #fde047;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+    .guide-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-title);
+      margin-bottom: 4px;
+    }
+
+    .guide-text {
+      font-size: 12.5px;
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+
+    /* Notice Box */
+    .kakao-notice {
+      background: #2a281e;
+      border: 1px solid #5a4f27;
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      font-size: 12.5px;
+      color: #fef08a;
+      line-height: 1.5;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    @media (min-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-dark);
+      position: relative;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+      transform: translateY(-3px);
+      border-color: #60561a;
+    }
+
+    .card-top-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--kakao-brown);
+      background: var(--kakao-yellow);
+      padding: 3px 9px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .product-brand {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .product-title {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--text-title);
+      margin-bottom: 12px;
+      line-height: 1.35;
+      min-height: 42px;
+      word-break: keep-all;
+    }
+
+    /* Image Box */
+    .img-wrap {
+      width: 100%;
+      height: 205px;
+      background: #17181a;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      border: 1px solid #2d3036;
+    }
+
+    .img-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .img-wrap img {
+      transform: scale(1.06);
+    }
+
+    /* Price Area */
+    .price-area {
+      border-top: 1px solid #2d3036;
+      padding: 14px 0 12px 0;
+      margin-bottom: 14px;
+    }
+
+    .price-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .price-value {
+      font-size: 22px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .price-value span {
+      font-size: 15px;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .delivery-pill {
+      display: inline-block;
+      font-size: 11.5px;
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* Pros & Cons (말풍선 스타일) */
+    .talk-box-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .talk-box {
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .talk-box.good {
+      background: #2a291e;
+      border: 1px solid #48411d;
+      color: #f1f5f9;
+    }
+
+    .talk-box.bad {
+      background: var(--bg-card-sub);
+      border: 1px solid #363940;
+      color: #cbd5e1;
+    }
+
+    .talk-box strong {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 3px;
+      font-size: 11.5px;
+    }
+
+    .talk-box.good strong {
+      color: #fde047;
+    }
+
+    .talk-box.bad strong {
+      color: #94a3b8;
+    }
+
+    /* Specs List */
+    .spec-group {
+      border-top: 1px dashed #363940;
+      padding-top: 12px;
+      margin-bottom: 16px;
+      font-size: 12.5px;
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+    }
+
+    .spec-label {
+      color: var(--text-muted);
+    }
+
+    .spec-val {
+      font-weight: 700;
+      color: var(--text-title);
+    }
+
+    /* Badge Verify */
+    .badge-verify {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      background: #3f2f18;
+      color: #fcd34d;
+      border: 1px solid #785319;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    /* Review Area */
+    .review-bar {
+      background: var(--bg-card-sub);
+      border: 1px solid #363940;
+      border-radius: var(--radius-sm);
+      padding: 9px 12px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+
+    .star-score {
+      color: var(--star-color);
+      font-weight: 800;
+    }
+
+    .review-cnt {
+      color: var(--text-muted);
+      font-size: 11.5px;
+    }
+
+    /* Action Button */
+    .btn-kakao {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: var(--kakao-yellow);
+      color: var(--kakao-brown);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 13px 16px;
+      border-radius: var(--radius-md);
+      transition: background-color 0.2s, transform 0.1s;
+      letter-spacing: -0.02em;
+    }
+
+    .btn-kakao:hover {
+      background-color: var(--kakao-yellow-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Comparison Table Section */
+    .compare-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 24px 22px;
+      box-shadow: var(--shadow-dark);
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-title);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-title span {
+      background: var(--kakao-yellow);
+      color: var(--kakao-brown);
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 800;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 660px;
+    }
+
+    th, td {
+      padding: 13px 14px;
+      text-align: left;
+      border-bottom: 1px solid #2d3036;
+    }
+
+    th {
+      background-color: #1a1c1f;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .table-thumb {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #17181a;
+      padding: 3px;
+      border: 1px solid #2d3036;
+    }
+
+    .table-link {
+      display: inline-block;
+      background: #2b2e33;
+      color: var(--kakao-yellow);
+      border: 1px solid #3d414a;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 12px;
+      transition: all 0.15s;
+    }
+
+    .table-link:hover {
+      background: var(--kakao-yellow);
+      color: var(--kakao-brown);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Kakao Header / GNB -->
+  <header class="kakao-gnb">
+    <div class="gnb-inner">
+      <div class="brand-wrap">
+        <span class="kakao-pill">kakao</span>
+        <span class="brand-title">쇼핑하기 · TV하단 무타공 선반장 집중 비교</span>
+      </div>
+      <div class="gnb-badge">
+        확인일: <strong>2026.11.14</strong> | 실판매 상품 매핑
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <span class="hero-tag">TV하단 무타공 수납 선반장 시리즈</span>
+      <h1 class="hero-title">KUTUMAI 스타일 무타공 셋톱박스 선반장 3종 집중 비교</h1>
+      <p class="hero-desc">벽걸이 TV 바로 밑에 드릴 없이 부착하는 인기 무타공 선반장(와이드 오픈형 vs 루버 양문형 vs 2단 오픈형)을 비교해 드려요.</p>
+    </div>
+
+    <!-- Kakao Guide Box -->
+    <div class="kakao-guide">
+      <div class="guide-header">
+        <span>⚡ 무타공 수납 스타일별 핵심 차이 3줄 요약</span>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-item" style="border-color:#5a4f27; background:#29271e;">
+          <span class="guide-badge" style="background:#fee500;">와이드 추천 (가운데 모델)</span>
+          <div class="guide-name">KUTUMAI 80cm 2단 선반장 (20,700원)</div>
+          <div class="guide-text">가로 80cm 와이드 규격으로 셋톱·공유기·멀티탭을 여유롭게 수납하고 플립 도어로 전선을 깔끔히 가려줘요.</div>
+        </div>
+        <div class="guide-item">
+          <span class="guide-badge">완전 밀폐형</span>
+          <div class="guide-name">KUTUMAI 블라인드 양문형 (19,300원)</div>
+          <div class="guide-text">갤러리 루버 양문형 도어로 내부 전선을 100% 감추면서도 틈새로 발열 통풍과 무선 신호가 잘 통과해요.</div>
+        </div>
+        <div class="guide-item">
+          <span class="guide-badge">초가성비 오픈형</span>
+          <div class="guide-name">한상국제 2단 오픈 랙 선반 (11,540원~)</div>
+          <div class="guide-text">도어가 없어 리모컨 센서 간섭이 전혀 없고 발열 해소가 가장 뛰어나며, 1만원대 초반의 가성비를 자랑해요.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notice Box -->
+    <div class="kakao-notice">
+      <strong>🔔 정보 안내 원칙:</strong> 실제 확인된 기본 판매 가격, 배송 조건, 별점/리뷰 수는 그대로 반영하였으며, 사용자의 벽면 재질(대리석·타일·석고보드·벽지)에 따른 무타공 패치 접착력이나 실측 최대 하중은 임의로 지어내지 않고 <strong>[확인 필요]</strong>로 표시했습니다.
+    </div>
+
+    <!-- 3 Products Grid -->
+    <div class="product-grid">
+
+      <!-- Card 1: KUTUMAI 80cm 2단 선반장 (대표 모델) -->
+      <div class="product-card" style="border-color:#5a4f27;">
+        <div>
+          <span class="card-top-tag" style="background:#fee500;">👑 사용자가 주목한 와이드 1위</span>
+          <div class="product-brand">KUTUMAI (쿠투마이)</div>
+          <h2 class="product-title">KUTUMAI 무타공 셋톱박스 공유기 정리함 80cm TV하단 와이파이 선반장</h2>
+
+          <!-- Real Image -->
+          <div class="img-wrap">
+            <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/44b4/b0f740471d06a9c07c967a4646e2965b5cfed60baf2f82b00131ca705632.png" alt="KUTUMAI 80cm 무타공 선반장" loading="lazy">
+          </div>
+
+          <div class="price-area">
+            <div class="price-label">쿠팡 실제 판매가 (46% 할인)</div>
+            <div class="price-value">20,700<span>원</span></div>
+            <span class="delivery-pill">판매자로켓 무료배송 (내일도착)</span>
+          </div>
+
+          <!-- Pros & Cons -->
+          <div class="talk-box-wrap">
+            <div class="talk-box good">
+              <strong>👍 좋은 점</strong>
+              80cm 넉넉한 가로 길이로 셋톱·공유기·멀티탭이 한 번에 수납되고, 상판에 액자나 디퓨저도 올려둘 수 있어요.
+            </div>
+            <div class="talk-box bad">
+              <strong>👎 아쉬운 점</strong>
+              경량 WPC 보드 조립식 소재로 아주 무거운 대형 물건 적재 시 주의가 필요해요.
+            </div>
+          </div>
+
+          <!-- Specs -->
+          <div class="spec-group">
+            <div class="spec-row">
+              <span class="spec-label">사이즈 규격</span>
+              <span class="spec-val">80 × 20 × 11 cm (와이드)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">도어 / 소재</span>
+              <span class="spec-val">전면 플립도어 / 방수 WPC보드</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">벽지별 부착 유지력</span>
+              <span class="spec-val"><span class="badge-verify">확인 필요 (벽면 조건별)</span></span>
+            </div>
+          </div>
+
+          <div class="review-bar">
+            <div><span class="star-score">★ 4.5</span> <span style="font-size:11px; color:var(--text-muted);">/ 5.0</span></div>
+            <div class="review-cnt" style="font-weight:700; color:var(--kakao-yellow);">리뷰 148개 (쿠팡추천)</div>
+          </div>
+        </div>
+
+        <a href="https://www.coupang.com/vp/products/9588653097?itemId=24905322967&vendorItemId=91910606990" target="_blank" rel="noopener noreferrer" class="btn-kakao">
+          쿠팡에서 보러가기
+        </a>
+      </div>
+
+      <!-- Card 2: KUTUMAI 블라인드 양문형 2단 -->
+      <div class="product-card">
+        <div>
+          <span class="card-top-tag">깔끔 도어 밀폐형</span>
+          <div class="product-brand">KUTUMAI (쿠투마이)</div>
+          <h2 class="product-title">KUTUMAI 무타공 벽걸이 공유기 수납함 화이트 블라인드 양문형 2단</h2>
+
+          <!-- Real Image -->
+          <div class="img-wrap">
+            <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/9b4c/2456c9743fe3d1a74be2496ed7bee29f9800cb15b97e3f8e7282955e611d.png" alt="KUTUMAI 블라인드 양문형 수납함" loading="lazy">
+          </div>
+
+          <div class="price-area">
+            <div class="price-label">쿠팡 실제 판매가 (45% 할인)</div>
+            <div class="price-value">19,300<span>원</span></div>
+            <span class="delivery-pill">판매자로켓 무료배송 (내일도착)</span>
+          </div>
+
+          <!-- Pros & Cons -->
+          <div class="talk-box-wrap">
+            <div class="talk-box good">
+              <strong>👍 좋은 점</strong>
+              블라인드 갤러리 도어가 전선을 완전히 가려주어 TV 아래가 가장 단정하고 깔끔해 보여요.
+            </div>
+            <div class="talk-box bad">
+              <strong>👎 아쉬운 점</strong>
+              가로 폭이 40cm로 콤팩트하여 대형 멀티탭이나 3개 이상의 기기를 한 번에 넣기엔 공간이 좁을 수 있어요.
+            </div>
+          </div>
+
+          <!-- Specs -->
+          <div class="spec-group">
+            <div class="spec-row">
+              <span class="spec-label">사이즈 규격</span>
+              <span class="spec-val">40 × 30 × 10 cm (콤팩트 2단)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">도어 / 소재</span>
+              <span class="spec-val">루버 양문형 / 친환경 WPC</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">벽지별 부착 유지력</span>
+              <span class="spec-val"><span class="badge-verify">확인 필요 (벽면 조건별)</span></span>
+            </div>
+          </div>
+
+          <div class="review-bar">
+            <div><span class="star-score">★ 4.5</span> <span style="font-size:11px; color:var(--text-muted);">/ 5.0</span></div>
+            <div class="review-cnt">리뷰 78개 (최근 구매 급증)</div>
+          </div>
+        </div>
+
+        <a href="https://www.coupang.com/vp/products/9637137362?itemId=28792320731&vendorItemId=95544999530" target="_blank" rel="noopener noreferrer" class="btn-kakao">
+          쿠팡에서 보러가기
+        </a>
+      </div>
+
+      <!-- Card 3: 한상국제 2단 완전 오픈 랙 선반 -->
+      <div class="product-card">
+        <div>
+          <span class="card-top-tag" style="background:#374151; color:#f3f4f6;">발열·신호 최고 오픈형</span>
+          <div class="product-brand">주식회사 한상국제무역</div>
+          <h2 class="product-title">무타공 셋톱박스 2단 와이파이 벽걸이형 선반 공유기 보관함 (화이트)</h2>
+
+          <!-- Real Image -->
+          <div class="img-wrap">
+            <img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/3a27/468957f08db4f9c82ccf94c384914c750f33b4eeee8b05566d249cd83276.jpg" alt="무타공 2단 오픈 선반 랙" loading="lazy">
+          </div>
+
+          <div class="price-area">
+            <div class="price-label">쿠팡 실제 판매가 (사이즈별)</div>
+            <div class="price-value">11,540<span>원~</span></div>
+            <span class="delivery-pill">판매자로켓 무료배송 (내일도착)</span>
+          </div>
+
+          <!-- Pros & Cons -->
+          <div class="talk-box-wrap">
+            <div class="talk-box good">
+              <strong>👍 좋은 점</strong>
+              도어가 없는 오픈형이라 리모컨 수신 방해와 공유기 발열이 전혀 없고, 1만원대 초반으로 가장 저렴해요.
+            </div>
+            <div class="talk-box bad">
+              <strong>👎 아쉬운 점</strong>
+              도어가 없어 복잡한 케이블 뭉치가 전면에서 일부 노출될 수 있어 선정리 타이를 잘 써야 해요.
+            </div>
+          </div>
+
+          <!-- Specs -->
+          <div class="spec-group">
+            <div class="spec-row">
+              <span class="spec-label">사이즈 규격</span>
+              <span class="spec-val">30~80cm 선택 가능 (2단)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">도어 / 소재</span>
+              <span class="spec-val">완전 오픈형 / 고밀도 PVC</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">벽지별 부착 유지력</span>
+              <span class="spec-val"><span class="badge-verify">확인 필요 (벽면 조건별)</span></span>
+            </div>
+          </div>
+
+          <div class="review-bar">
+            <div><span class="star-score">★ 4.5</span> <span style="font-size:11px; color:var(--text-muted);">/ 5.0</span></div>
+            <div class="review-cnt" style="font-weight:700; color:#ffffff;">리뷰 148개</div>
+          </div>
+        </div>
+
+        <a href="https://www.coupang.com/vp/products/8956960815?itemId=26207204663&vendorItemId=93186336433" target="_blank" rel="noopener noreferrer" class="btn-kakao">
+          쿠팡에서 보러가기
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Comparison Table Section -->
+    <div class="compare-section">
+      <div class="section-title">
+        TV하단 무타공 선반장 3종 형태별 정밀 비교표
+        <span>무타공 시리즈</span>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>기본 구분</th>
+              <th>KUTUMAI 80cm 2단 선반장 (와이드)</th>
+              <th>KUTUMAI 블라인드 양문형 2단</th>
+              <th>한상국제 2단 오픈 랙 선반</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>실물 사진</strong></td>
+              <td><img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/44b4/b0f740471d06a9c07c967a4646e2965b5cfed60baf2f82b00131ca705632.png" alt="KUTUMAI 80cm" class="table-thumb"></td>
+              <td><img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/9b4c/2456c9743fe3d1a74be2496ed7bee29f9800cb15b97e3f8e7282955e611d.png" alt="KUTUMAI 양문형" class="table-thumb"></td>
+              <td><img src="https://thumbnail.coupangcdn.com/thumbnails/remote/640x640ex/image/vendor_inventory/3a27/468957f08db4f9c82ccf94c384914c750f33b4eeee8b05566d249cd83276.jpg" alt="오픈 선반" class="table-thumb"></td>
+            </tr>
+            <tr>
+              <td><strong>판매 가격</strong></td>
+              <td><strong style="color:var(--kakao-yellow);">20,700원</strong></td>
+              <td><strong style="color:#ffffff;">19,300원</strong></td>
+              <td><strong style="color:#ffffff;">11,540원~</strong></td>
+            </tr>
+            <tr>
+              <td><strong>규격 사이즈</strong></td>
+              <td>가로 80 × 세로 20 × 높이 11 cm</td>
+              <td>가로 40 × 세로 30 × 깊이 10 cm</td>
+              <td>가로 30~80cm 선택 가능</td>
+            </tr>
+            <tr>
+              <td><strong>도어 개폐 형태</strong></td>
+              <td><strong>중앙 오픈 + 플립 도어 수납</strong></td>
+              <td><strong>루버 블라인드 양문형 여닫이</strong></td>
+              <td><strong>도어 없는 완전 개방형 2단 랙</strong></td>
+            </tr>
+            <tr>
+              <td><strong>설치 방식</strong></td>
+              <td>무타공 패치 / 핀 고정</td>
+              <td>무타공 패치 / 핀 고정</td>
+              <td>무타공 패치 / 핀 고정</td>
+            </tr>
+            <tr>
+              <td><strong>좋은 점</strong></td>
+              <td>80cm 넓은 수납력, TV와 균형감 최고</td>
+              <td>루버 도어로 전선 100% 밀폐 은폐</td>
+              <td>리모컨 수신 장애 제로, 최고 가성비</td>
+            </tr>
+            <tr>
+              <td><strong>아쉬운 점</strong></td>
+              <td>플립 도어로 아주 큰 기기는 확인 필요</td>
+              <td>40cm로 다수 기기 수납 시 좁음</td>
+              <td>도어가 없어 전선이 전면 노출됨</td>
+            </tr>
+            <tr>
+              <td><strong>리뷰 평점</strong></td>
+              <td>★ 4.5 (148개 리뷰)</td>
+              <td>★ 4.5 (78개 리뷰)</td>
+              <td>★ 4.5 (148개 리뷰)</td>
+            </tr>
+            <tr>
+              <td><strong>벽지별 실측 접착력</strong></td>
+              <td><span class="badge-verify">확인 필요 (벽면 조건)</span></td>
+              <td><span class="badge-verify">확인 필요 (벽면 조건)</span></td>
+              <td><span class="badge-verify">확인 필요 (벽면 조건)</span></td>
+            </tr>
+            <tr>
+              <td><strong>상세 링크</strong></td>
+              <td><a href="https://www.coupang.com/vp/products/9588653097?itemId=24905322967&vendorItemId=91910606990" target="_blank" class="table-link">상품보기 ↗</a></td>
+              <td><a href="https://www.coupang.com/vp/products/9637137362?itemId=28792320731&vendorItemId=95544999530" target="_blank" class="table-link">상품보기 ↗</a></td>
+              <td><a href="https://www.coupang.com/vp/products/8956960815?itemId=26207204663&vendorItemId=93186336433" target="_blank" class="table-link">상품보기 ↗</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Kakao Footer -->
+  <footer>
+    <p>데이터 확인일: 2026.11.14 | 카카오톡 다크모드 테마 적용</p>
+    <p>본 대시보드는 사용자가 선호하는 TV하단 무타공 셋톱박스 수납 선반장 스타일을 바탕으로 집중 제작되었습니다.</p>
+  </footer>
+
+</body>
+</html>
